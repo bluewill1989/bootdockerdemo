@@ -21,6 +21,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<docker.repo.name>znwei</docker.repo.name>
 		<docker.image.prefix>homeboot</docker.image.prefix>
 	</properties>
 
@@ -108,7 +109,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>1.0.0</version>
 				<configuration>
-					<imageName>${docker.image.prefix}_${project.artifactId}</imageName>
+					<imageName>${docker.repo.name}/${docker.image.prefix}_${project.artifactId}</imageName>
 					<imageTags>
 						<imageTag>${project.version}</imageTag>
 						<imageTag>latest</imageTag>
